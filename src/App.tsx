@@ -3,34 +3,8 @@ import { Background, Controls, ReactFlow, type Edge, type Node } from '@xyflow/r
 import '@xyflow/react/dist/style.css';
 import './App.css'
 
-interface BiologicalModel {
-  id: number
-  name: string
-}
-
-interface TechnicalChallenge {
-  id: number
-  name: string
-  biologicalModels: BiologicalModel[]
-}
-
-interface Project {
-  id: number
-  name: string
-  technicalChallenges: TechnicalChallenge[]
-}
-
 export default function App() {
-  const [project, setProject] = useState<Project | null>(null)
 
-  useEffect(() => {
-    fetch('https://technical-test-866419219838.europe-west3.run.app/projects/1')
-      .then(response => response.json())
-      .then((data: Project) => {
-        setProject(data)
-      })
-      .catch(error => console.error('Error fetching data:', error))
-  }, [])
 
   const nodes: Node[] = []
   const edges: Edge[] = []
