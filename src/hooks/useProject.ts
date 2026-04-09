@@ -1,4 +1,5 @@
-import React from 'react';
+import { useEffect, useState } from 'react';
+import type { Project } from '../types';
 
 const useProject = () => {
 
@@ -13,6 +14,7 @@ const useProject = () => {
       .catch(error => console.error('Error fetching data:', error))
   }, [])
 
+  return project
 };
 
 export default useProject;

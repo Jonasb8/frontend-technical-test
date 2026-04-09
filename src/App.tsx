@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react'
 import { Background, Controls, ReactFlow, type Edge, type Node } from '@xyflow/react'
 import '@xyflow/react/dist/style.css';
 import './App.css'
+import useProject from './hooks/useProject'
 
 export default function App() {
-
+  const project = useProject()
 
   const nodes: Node[] = []
   const edges: Edge[] = []

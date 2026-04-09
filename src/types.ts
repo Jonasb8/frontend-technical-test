@@ -9,7 +9,7 @@ interface TechnicalChallenge {
   biologicalModels: BiologicalModel[]
 }
 
-interface Project {
+export interface Project {
   id: number
   name: string
   technicalChallenges: TechnicalChallenge[]
